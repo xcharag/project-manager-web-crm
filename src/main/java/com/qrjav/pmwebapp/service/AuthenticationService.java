@@ -97,4 +97,8 @@ public class AuthenticationService {
         userRepository.deleteById(id);
         return "User deleted";
     }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
 }

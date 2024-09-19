@@ -49,6 +49,11 @@ public class AuthenticationController {
         return authService.getUserDetailsFromToken(token);
     }
 
+    @GetMapping("/getAllUsers")
+    public List<User> getAllUsers() {
+        return authService.getAllUsers();
+    }
+
     @DeleteMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable Integer id) {
         return authService.deleteUser(id);
